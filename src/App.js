@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import DocasComponent from './Components/DocasComponent';
+
 
 function App() {
+  const docasdata = {
+    firstName: 'Ngobah',
+    lastName: 'Docas',
+    nationality: 'Cameroonian',
+    origin: 'Nwa',
+    age: '22',
+    hobby: 'coding, dancing, cooking and eating'
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Docas's Info</h1>
+      <p>I am {docasdata.firstName}</p>
+      <DocasComponent docasdata={docasdata} />
+      
     </div>
   );
 }
